@@ -1,8 +1,4 @@
-<div class= "tasksStyle">
-    <h2>Total tasks on board:</h2>
-    <br>
-    <editTask></editTask>
-    <br><br><br>
-    <p>Total tasks: {{ 0 }}</p>
-    <p>...the list...</p>
-</div>
+<h2>Total tasks on board:</h2>
+<br>
+<p>Total tasks: {{ amount}}</p>
+<single-row *ngFor = "let task of tasks; let i = index" [task]="task" [ind]="i+1"></single-row>

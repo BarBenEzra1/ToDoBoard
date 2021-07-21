@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TaskModel } from './task.model';
 
 @Component({
-  selector: 'task',
+  selector: 'single-row',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-
-  constructor() { }
-
+  @Input() task: TaskModel; 
+  @Input() ind;
+  
   ngOnInit(): void {
   }
 

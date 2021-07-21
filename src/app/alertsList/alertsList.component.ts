@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TaskModel } from '../tasksList/taskItem/task.model';
 
 @Component({
   selector: 'alertsList',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alertsList.component.css']
 })
 export class AlertsListComponent implements OnInit {
-
-  constructor() { }
+  @Input() tasks:TaskModel[] = [];
 
   ngOnInit(): void {
   }

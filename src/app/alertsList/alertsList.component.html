@@ -1,5 +1,4 @@
-<div class= "alertsStyle">
-    <h2>The tasks scheduled for today:</h2>
-    <br>
-    <p>Total tasks: {{ 0 }}</p>
-</div>
+<h2>The tasks scheduled for today:</h2>
+<br>
+<p>Total tasks: {{ 0 }}</p>
+<single-row *ngFor = "let task of tasks; let i = index" [task]="task" [ind]="i+1"></single-row>

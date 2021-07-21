@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TaskModel } from './taskItem/task.model';
 
 @Component({
   selector: 'tasksList',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasksList.component.css']
 })
 export class TasksListComponent implements OnInit {
-
-  constructor() { }
+  @Input() tasks:TaskModel[] = [];
+  @Input() amount:number;
 
   ngOnInit(): void {
   }

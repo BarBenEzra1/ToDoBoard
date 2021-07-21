@@ -1,8 +1,6 @@
-<body class = "generalStyle">
+<div class = "generalStyle">
     <header></header>
-    <br><br><br><br>
-    <tasksList></tasksList>
-    <br>
-    <br>
-    <alertsList></alertsList>
-</body>
+    <editTask (taskAdded) = "addNewTask($event)"></editTask>
+    <tasksList [tasks] = "tasks" [amount] = "amountOfTasks"></tasksList>
+    <alertsList [tasks] = "tasks"></alertsList>
+</div>

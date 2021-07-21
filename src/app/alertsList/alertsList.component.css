@@ -1,6 +1,6 @@
-.alertsStyle {
-    position: relative;
-    top: -38rem;
-    right: 25rem;
-    float: right;
+:host() {
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    grid-column: 2;
+    justify-self: center;
 }
