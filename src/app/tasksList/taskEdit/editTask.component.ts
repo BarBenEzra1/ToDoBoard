@@ -14,11 +14,11 @@ export class EditTaskComponent implements OnInit {
 
   constructor(public datepipe: DatePipe){}
 
-  createTaskOnButtonClick(content:string, date: Date) {
+  createTaskOnButtonClick(content:string, date: string) {
     const currentNewTask = {
        creationDate: new Date(),
        content,
-       dueDate: this.datepipe.transform(date, 'yyyy-MM-dd')
+       dueDate: new Date(date),
     };
     this.taskAdded.emit(currentNewTask);
   }

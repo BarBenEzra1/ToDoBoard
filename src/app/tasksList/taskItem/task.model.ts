@@ -1,5 +1,5 @@
 export class TaskModel {
     public creationDate: Date;
-    public dueDate: string;
+    public dueDate: Date;
     public content: string;
 }

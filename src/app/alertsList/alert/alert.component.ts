@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TaskModel } from 'src/app/tasksList/taskItem/task.model';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'alert',
@@ -10,11 +9,16 @@ import { DatePipe } from '@angular/common';
 export class AlertComponent implements OnInit {
   @Input() task: TaskModel; 
   @Input() ind;
-  currentDate = this.datepipe.transform(new Date(), 'yyyy-MM-dd');
-
-  constructor(public datepipe: DatePipe){}
+  showTask;
 
   ngOnInit(): void {
+    this.showTask = this.isEqualDates(new Date());
+  }
+
+  isEqualDates(current: Date) {
+    return (current.getDate() === this.task.dueDate.getDate() &&
+    current.getMonth() === this.task.dueDate.getMonth() &&
+    current.getFullYear() === this.task.dueDate.getFullYear());
   }
 
 }
