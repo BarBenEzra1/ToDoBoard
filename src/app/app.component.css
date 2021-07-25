@@ -1,6 +1,5 @@
 .generalStyle {
     font-family: cursive;
-    background-color: mistyrose;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;

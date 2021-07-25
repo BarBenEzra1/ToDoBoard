@@ -8,7 +8,6 @@ import { AlertComponent } from './alertsList/alert/alert.component';
 import { HeaderComponent } from './header/header.component';
 import { TasksListComponent } from './tasksList/tasksList.component';
 import { AlertsListComponent } from './alertsList/alertsList.component';
-import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,12 +17,12 @@ import { DatePipe } from '@angular/common';
     AlertComponent,
     HeaderComponent,
     TasksListComponent,
-    AlertsListComponent
+    AlertsListComponent,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [DatePipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

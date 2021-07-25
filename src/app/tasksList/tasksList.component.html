@@ -1,4 +1,6 @@
 <h2>Total tasks on board:</h2>
 <br>
 <p>Total tasks: {{ amount }}</p>
-<single-row *ngFor="let task of tasks; let i = index; trackBy: trackByIndex" [task]="task" [index]="i+1"></single-row>
+<div style="height: 30rem; overflow-y: auto;">
+    <single-row *ngFor="let task of tasks; let i = index" [task]="task" [index]="i+1"></single-row>
+</div>
