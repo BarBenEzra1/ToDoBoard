@@ -3,5 +3,6 @@
 <textarea class= "inputField" type="text" placeholder="New task" #taskContent></textarea>
 <br>
 <input class= "dateField" type="date" placeholder="Due date" #taskDueDate>
+<p>{{taskDueDate.value}}</p>
 <br><br>
 <button (click) = "createTaskOnButtonClick(taskContent.value, taskDueDate.value)">Add new task</button>

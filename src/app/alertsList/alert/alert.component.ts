@@ -10,6 +10,9 @@ import { DatePipe } from '@angular/common';
 export class AlertComponent implements OnInit {
   @Input() task: TaskModel; 
   @Input() ind;
+  currentDate = this.datepipe.transform(new Date(), 'yyyy-MM-dd');
+
+  constructor(public datepipe: DatePipe){}
 
   ngOnInit(): void {
   }

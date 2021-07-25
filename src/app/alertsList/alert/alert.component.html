@@ -1,7 +1,7 @@
-<div class = "singleTaskStyle">    
-    <p><b>Task number:</b> {{ ind }}</p>
-    <p><b>Creation date:</b> {{ task.creationDate | date:'shortDate' }}</p>
-    <p><b>Content:</b> {{ task.content }}</p>
-    <p><b>Due date:</b> {{ task.dueDate | date:'shortDate'}}</p>
+<div class = "singleTaskStyle" *ngIf="task.dueDate === currentDate">    
+    <p><span class = "bold">Task number: </span><span>{{ ind }}</span></p>
+    <p><span class = "bold">Creation date: </span><span>{{ task.creationDate | date:'shortDate' }}</span></p>
+    <p><span class = "bold">Content: </span><span>{{ task.content }}</span></p>
+    <p><span class = "bold">Due date: </span><span>{{ task.dueDate | date:'shortDate'}}</span></p>
 </div>
 <br>
