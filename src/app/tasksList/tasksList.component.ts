@@ -12,4 +12,8 @@ export class TasksListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  trackByIndex(index, task){     
+    return index;
+  }
 }
