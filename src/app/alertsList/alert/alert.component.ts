@@ -7,12 +7,18 @@ import { TaskModel } from 'src/app/tasksList/taskItem/task.model';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent implements OnInit {
-  @Input() task: TaskModel; 
-  @Input() ind;
+  @Input() task: TaskModel;
+  static counter = 0;
   showTask;
 
   ngOnInit(): void {
     this.showTask = this.isEqualDates(new Date());
+  }
+
+  updateIndex() {
+    if (this.showTask) {
+      return AlertComponent.counter++;
+    }
   }
 
   isEqualDates(current: Date) {

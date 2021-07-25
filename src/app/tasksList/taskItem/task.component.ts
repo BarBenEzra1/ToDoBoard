@@ -8,7 +8,7 @@ import { TaskModel } from './task.model';
 })
 export class TaskComponent implements OnInit {
   @Input() task: TaskModel; 
-  @Input() ind;
+  @Input() index;
   
   ngOnInit(): void {
   }
