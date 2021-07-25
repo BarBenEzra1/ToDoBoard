@@ -1,7 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { TasksListComponent } from '../tasksList.component';
 import { TaskModel } from '../taskItem/task.model';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'editTask',
@@ -11,8 +9,9 @@ import { DatePipe } from '@angular/common';
 
 export class EditTaskComponent implements OnInit {
   @Output() taskAdded:EventEmitter<TaskModel> = new EventEmitter();
-
-  constructor(public datepipe: DatePipe){}
+  
+  ngOnInit(): void {
+  }
 
   createTaskOnButtonClick(content:string, date: string) {
     const currentNewTask = {
@@ -22,8 +21,4 @@ export class EditTaskComponent implements OnInit {
     };
     this.taskAdded.emit(currentNewTask);
   }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -2,3 +2,7 @@
     border: 0.3rem solid salmon;
     padding: 2rem;
 }
+
+.bold {
+    font-weight: bold;
+}
