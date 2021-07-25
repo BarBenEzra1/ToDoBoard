@@ -1,8 +1,7 @@
 <h2>Add new task:</h2>
 <br>
-<textarea class= "inputField" type="text" placeholder="New task" #taskContent></textarea>
+<textarea class="inputField" type="text" placeholder="New task" #taskContent></textarea>
 <br>
-<input class= "dateField" type="date" placeholder="Due date" #taskDueDate>
-<p>{{taskDueDate.value}}</p>
+<input class="dateField" type="date" placeholder="Due date" #taskDueDate>
 <br><br>
 <button (click) = "createTaskOnButtonClick(taskContent.value, taskDueDate.value)">Add new task</button>
