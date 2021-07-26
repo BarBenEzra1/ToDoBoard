@@ -9,10 +9,8 @@ import { TaskModel } from './tasksList/taskItem/task.model';
 export class AppComponent {
   title = 'ToDoBoard';
   tasks:TaskModel[] = [];
-  amountOfTasks;
 
   addNewTask(task:TaskModel):void {
     this.tasks.push(task);
-    this.amountOfTasks = this.tasks.length;
   }
 }

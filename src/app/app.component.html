@@ -1,6 +1,6 @@
 <div class="generalStyle">
     <header></header>
     <editTask (taskAdded)="addNewTask($event)"></editTask>
-    <tasksList [tasks]="tasks" [amount]="amountOfTasks"></tasksList>
+    <tasksList [tasks]="tasks" [amount]="tasks.length"></tasksList>
     <alertsList [tasks]="tasks"></alertsList>
 </div>
