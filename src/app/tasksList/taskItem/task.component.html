@@ -1,7 +1,7 @@
 <div class="singleTaskStyle">    
     <p><span class="bold">Task number: </span><span>{{ index }}</span></p>
     <p><span class="bold">Creation date: </span><span>{{ task.creationDate | date:'shortDate' }}</span></p>
-    <p><span class="bold">Content: </span><span>{{ task.content }}</span></p>
+    <p><span class="bold">Content: </span><textarea class="content">{{ task.content }}</textarea></p>
     <p><span class="bold">Due date: </span><span>{{ task.dueDate | date:'shortDate'}}</span></p>
 </div>
 <br>

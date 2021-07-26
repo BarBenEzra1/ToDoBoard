@@ -1,8 +1,15 @@
 .singleTaskStyle {
     border: 0.3rem solid salmon;
     padding: 2rem;
+    width: 50rem;
 }
 
 .bold {
     font-weight: bold;
+}
+
+.content {
+    width: 40rem;
+    height: 10rem;
+    background-color: mistyrose;
 }
