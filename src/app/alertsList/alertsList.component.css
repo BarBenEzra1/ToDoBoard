@@ -1,6 +1,6 @@
 :host() {
-    grid-row-start: 2;
-    grid-row-end: span 2;
-    grid-column: 2;
+    grid-row: 2;
+    /* grid-row-end: span 2; */
+    /* grid-column: 2; */
     justify-self: center;
 }
