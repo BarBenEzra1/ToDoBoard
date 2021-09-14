@@ -1,0 +1,6 @@
+<div class="singleTaskStyle" *ngIf="showTask">
+    <p><span class="bold">Creation date: </span><span>{{ task.creationDate | date:'shortDate' }}</span></p>
+    <p><span class="bold">Content: </span><span>{{ task.content }}</span></p>
+    <p><span class="bold">Due date: </span><span>{{ task.dueDate | date:'shortDate'}}</span></p>
+</div>
+<br>

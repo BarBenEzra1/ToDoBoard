@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskModel } from './tasksList/taskItem/task.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDoBoard';
+  tasks:TaskModel[] = [];
+
+  addNewTask(task:TaskModel):void {
+    this.tasks.push(task);
+  }
 }
