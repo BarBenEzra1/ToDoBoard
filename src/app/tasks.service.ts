@@ -5,8 +5,8 @@ export class TasksService {
 
     addTask(date:Date, newDate:Date, content):void {
         const currentNewTask = {
-            creationDate: new Date(),
-            dueDate: new Date(date),
+            creationDate: date,
+            dueDate: newDate,
             content,
         };
         this.tasks.push(currentNewTask);
