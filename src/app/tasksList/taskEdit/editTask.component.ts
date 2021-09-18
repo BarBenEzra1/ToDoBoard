@@ -1,24 +1,20 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { TaskModel } from '../taskItem/task.model';
+import { Component, OnInit} from '@angular/core';
+import { TasksService } from 'src/app/tasks.service';
 
 @Component({
   selector: 'editTask',
   templateUrl: './editTask.component.html',
-  styleUrls: ['./editTask.component.css']
+  styleUrls: ['./editTask.component.css'],
+  providers: []
 })
 
 export class EditTaskComponent implements OnInit {
-  @Output() taskAdded:EventEmitter<TaskModel> = new EventEmitter();
   
-  ngOnInit(): void {
-  }
+  constructor(private tasksService: TasksService) {}
+
+  ngOnInit(): void {}
 
   createTaskOnButtonClick(content:string, date: string) {
-    const currentNewTask = {
-       creationDate: new Date(),
-       content,
-       dueDate: new Date(date),
-    };
-    this.taskAdded.emit(currentNewTask);
+    this.tasksService.addTask(new Date(), new Date(date), content);
   }
 }
