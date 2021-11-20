@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { TaskModel } from './tasksList/taskItem/task.model';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [TasksService]
 })
 export class AppComponent {
   title = 'ToDoBoard';
-  tasks:TaskModel[] = [];
 
-  addNewTask(task:TaskModel):void {
-    this.tasks.push(task);
-  }
+  constructor(private tasksServise:TasksService) {}
 }

@@ -8,6 +8,15 @@ import { AlertComponent } from './alertsList/alert/alert.component';
 import { HeaderComponent } from './header/header.component';
 import { TasksListComponent } from './tasksList/tasksList.component';
 import { AlertsListComponent } from './alertsList/alertsList.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './homePage/home.component';
+
+const appRoutes: Routes =[
+  { path: 'home', component: HomeComponent },
+  { path: 'newTask', component: EditTaskComponent },
+  { path: 'allTasksList', component: TasksListComponent },
+  { path: 'todaysTasks', component: AlertsListComponent }
+];
 
 @NgModule({
   declarations: [
@@ -18,9 +27,11 @@ import { AlertsListComponent } from './alertsList/alertsList.component';
     HeaderComponent,
     TasksListComponent,
     AlertsListComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

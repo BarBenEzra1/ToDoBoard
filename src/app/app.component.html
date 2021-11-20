@@ -1,6 +1,4 @@
 <div class="generalStyle">
     <header></header>
-    <editTask (taskAdded)="addNewTask($event)"></editTask>
-    <tasksList [tasks]="tasks" [amount]="tasks.length"></tasksList>
-    <alertsList [tasks]="tasks"></alertsList>
+    <router-outlet></router-outlet>
 </div>

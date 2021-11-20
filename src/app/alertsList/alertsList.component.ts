@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TasksService } from '../tasks.service';
 import { TaskModel } from '../tasksList/taskItem/task.model';
 
 @Component({
@@ -7,9 +8,12 @@ import { TaskModel } from '../tasksList/taskItem/task.model';
   styleUrls: ['./alertsList.component.css']
 })
 export class AlertsListComponent implements OnInit {
-  @Input() tasks:TaskModel[] = [];
+  tasks:TaskModel[];
+
+  constructor(private tasksService:TasksService) {}
 
   ngOnInit(): void {
+    this.tasks = this.tasksService.tasks;
   }
 
 }
